@@ -55,21 +55,11 @@ class IpAddressViewSet(viewsets.ModelViewSet):
         if subnet_issue:
             return Response({'error': 'Invalid subnet notation'})
 
-        """
-        try:
-            IPv4Network(request.data['subnet'])
-        except:
-            return Response({'error': 'Invalid subnet notation'})
-        """
         subnet_range_issue = IpTools().subnet_range(request.data['ip_address'], request.data['subnet'])
 
         if subnet_range_issue:
             return Response({'error': 'IP does not belong to the subnet'})
 
-        """
-        if request.data['ip_address'] not in [str(ip) for ip in IPv4Network(request.data['subnet'])]:
-            return Response({'error': 'IP does not belong to the subnet or invalid notation'})
-        """
         addresses = IpAddress.objects.all().values()
 
         ip_used = IpTools().ip_not_available(request.data['ip_address'], addresses)
@@ -77,12 +67,6 @@ class IpAddressViewSet(viewsets.ModelViewSet):
         if ip_used:
             return Response({'error': 'IP address already used'})
 
-        """
-        for ip in addresses:
-
-            if request.data['ip_address'] == ip['ip_address']:
-                return Response({'error': 'IP address already used'})
-        """
 
         serializer = IpAddressSerializer(data=request.data)
         if serializer.is_valid():

@@ -12,12 +12,9 @@ router = routers.DefaultRouter()
 router.register('network', IpAddressViewSet, basename='network')
 
 
-#app_name = 'netapi'
-
 urlpatterns = [
 
     path('api/v1/', include((router.urls,'api'),namespace='api')),
-    #path('api/v1/', include(router.urls,)),
     path('admin/', admin.site.urls),
     path('api-auth/', include('rest_framework.urls'))
 ]

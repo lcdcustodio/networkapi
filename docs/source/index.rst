@@ -18,6 +18,7 @@ Returns all Networks info.::
 Response.::
 
     {
+        "id": "ip_address-id",
         "ip_address": "ip_address",
         "subnet": "subnet with cidr",
         "description": "optional description"
@@ -37,7 +38,7 @@ POST
 
 Create a new IP Address.::
 
-    POST /api/v1/network/new
+    POST /api/v1/network/new/
 
 Post Parameters
 

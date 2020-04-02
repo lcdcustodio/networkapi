@@ -5,31 +5,31 @@ Available Features
 ==================
 
 * IPv4 IP address management
-* RESTful API to for CRUD operations
+* RESTful API
 
 ------------
 
 Project Goals
 =============
 
-* provide RESTful API solution able to manage Network IP Addresses
+* provide solution able to manage Network IP Addresses  through web interface and API
 
 
 ------------
 
-Install Development Version
+Installation
 ===========================
 
-Install the development version using the following commands:
+Install version using the following commands:
 
 .. code-block:: shell
 
     git clone https://github.com/lcdcustodio/networkapi.git
-    cd netapi
+    cd networkapi
     pip install -r requirements.txt
 
 
-Launch the development sever:
+Launch the server:
 
 .. code-block:: shell
 
@@ -37,6 +37,13 @@ Launch the development sever:
     python manage.py migrate
     python manage.py createsuperuser
     python manage.py runserver
+
+Run the test suite:
+
+.. code-block:: shell
+
+    python manage.py test
+
 
 You can access the admin interface at `http://127.0.0.1:8000/admin/`.
 
