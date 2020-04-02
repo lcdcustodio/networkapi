@@ -1,0 +1,10 @@
+Django==3.0.4
+django-filter==2.2.0
+djangorestframework==3.11.0
+docutils==0.16
+Markdown==3.2.1
+pytz==2019.3
+requests==2.23.0
+Sphinx==2.4.4
+sphinx-rtd-theme==0.4.3
+
