@@ -1,11 +1,12 @@
-netapi
+NetworkApi
 ===========
 
 Available Features
 ==================
 
-* IPv4 IP address management
+* IP address management
 * RESTful API
+* IPv4 only
 
 ------------
 
