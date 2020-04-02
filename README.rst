@@ -40,9 +40,9 @@ Launch the development sever:
 
 You can access the admin interface at `http://127.0.0.1:8000/admin/`.
 
-------------
+
+RESTful API Documentation
+=========================
 
 
-## RESTful API Documentation
-
-[Documentation](http://ec2-52-90-92-199.compute-1.amazonaws.com/html/)
+`Documentation <http://ec2-52-90-92-199.compute-1.amazonaws.com/html/>`_
